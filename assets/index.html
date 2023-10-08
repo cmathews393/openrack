@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComicRack Mockup</title>
+    <style >
+        stylesheet: stylesheet.css
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #sidebar {
+            width: 20%;
+            height: 100vh;
+            border-right: 1px solid gray;
+            box-sizing: border-box;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        #content {
+            width: 80%;
+            height: 100vh;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-columns {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filter-column {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .comic-thumbnails {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+        }
+
+        .comic-thumbnail {
+            width: 100%;
+            height: 140px;
+            background-color: red;
+            background-image: url('path/to/x-image.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sidebar">
+        <h3>Library</h3>
+        <ul>
+            <li>Smart Lists</li>
+            <li>Unspecified</li>
+            <li>Convert to CBZ</li>
+            <!-- ... -->
+        </ul>
+    </div>
+    <div id="content">
+        <div class="filter-columns">
+            <div class="filter-column">
+                <label for="title-dropdown">Titles</label>
+                <select id="title-dropdown">
+                    <option>All Titles</option>
+                    <!-- ... -->
+                </select>
+            </div>
+            <div class="filter-column">
+                <label for="series-dropdown">Series</label>
+                <select id="series-dropdown">
+                    <option>All Series</option>
+                    <!-- ... -->
+                </select>
+            </div>
+            <div class="filter-column">
+                <label for="genres-dropdown">Genres</label>
+                <select id="genres-dropdown">
+                    <option>All Genres</option>
+                    <!-- ... -->
+                </select>
+            </div>
+        </div>
+        <div class="comic-thumbnails">
+            <div class="comic-thumbnail"></div>
+            <div class="comic-thumbnail"></div>
+            <div class="comic-thumbnail"></div>
+            <!-- ... -->
+        </div>
+    </div>
+</body>
+
+</html>
